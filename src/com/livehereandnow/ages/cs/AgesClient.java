@@ -27,8 +27,9 @@ public class AgesClient {
             String fromUser;
 
             while ((fromServer = in.readLine()) != null) {
-                System.out.println("Server: " + fromServer);
-                if (fromServer.equals("Bye.")) {
+                System.out.print("" + fromServer+" ");
+                if (fromServer.equals("Bye")) {
+                    agesSocket.close();
                     break;
                 }
 
